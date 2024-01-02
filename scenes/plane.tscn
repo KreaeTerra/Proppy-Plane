@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1xj0tsrr44q"]
+[gd_scene load_steps=4 format=3 uid="uid://b1xj0tsrr44q"]
 
 [ext_resource type="Texture2D" uid="uid://s03plpw3jktf" path="res://icon.svg" id="1_gsp2c"]
+[ext_resource type="Script" path="res://scripts/plane.gd" id="1_jfe4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wdsu1"]
 size = Vector2(56, 20)
 
 [node name="Plane" type="RigidBody2D"]
+script = ExtResource("1_jfe4y")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.16)
