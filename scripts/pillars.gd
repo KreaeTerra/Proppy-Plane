@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 func _ready():
 	randomize()
+	position.x = 800
 	lower_pillar.position.y += randi() % 150
 	position.y = randi() % 300
 	velocity.x = speed
