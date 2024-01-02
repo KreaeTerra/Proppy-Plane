@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bi4fr4d4mkwm2"]
+[gd_scene load_steps=4 format=3 uid="uid://bi4fr4d4mkwm2"]
+
+[ext_resource type="Script" path="res://scripts/pillars.gd" id="1_f1wkm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f06du"]
 size = Vector2(59, 576)
@@ -7,6 +9,7 @@ size = Vector2(59, 576)
 size = Vector2(59, 576)
 
 [node name="Pillars" type="Node2D"]
+script = ExtResource("1_f1wkm")
 
 [node name="UpparPillarBody" type="CharacterBody2D" parent="."]
 
@@ -21,6 +24,7 @@ position = Vector2(29.5, -248)
 shape = SubResource("RectangleShape2D_f06du")
 
 [node name="LowerPillarBody" type="CharacterBody2D" parent="."]
+position = Vector2(0, -50)
 
 [node name="LowerPillarTexture" type="ColorRect" parent="LowerPillarBody"]
 offset_top = 160.0
