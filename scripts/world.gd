@@ -16,5 +16,5 @@ func spawn_pillar():
 func _on_pillar_timer_timeout():
 	var pillar_instance = Pillar.instantiate()
 	add_child(pillar_instance)
-	timer.wait_time = randf_range(3, 4.5)
+	timer.wait_time = randf_range(1.5, 4.0)
 	timer.start()
