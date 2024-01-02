@@ -9,3 +9,8 @@ script = ExtResource("1_xcusl")
 offset_right = 720.0
 offset_bottom = 480.0
 color = Color(0, 0.196078, 0.439216, 1)
+
+[node name="PillarTimer" type="Timer" parent="."]
+wait_time = 4.0
+
+[connection signal="timeout" from="PillarTimer" to="." method="_on_pillar_timer_timeout"]
