@@ -12,7 +12,6 @@ func _process(delta):
 	if Input.is_action_pressed("ui_up") and velocity.y > maximum_lift_speed:
 		velocity.y += lift_force
 	velocity.x = direction * speed
-	print("vertical speed " , velocity.y)
 	if velocity.y < terminal_velocity:
 		velocity.y += gravity
 	move_and_slide()
