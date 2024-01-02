@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wdsu1"]
 size = Vector2(56, 20)
 
-[node name="Plane" type="RigidBody2D"]
+[node name="Plane" type="CharacterBody2D"]
 script = ExtResource("1_jfe4y")
 
 [node name="Sprite" type="Sprite2D" parent="."]
