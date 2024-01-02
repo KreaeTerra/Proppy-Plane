@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://bi4fr4d4mkwm2"]
+[gd_scene load_steps=3 format=3 uid="uid://bi4fr4d4mkwm2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f06du"]
+size = Vector2(59, 576)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66qnj"]
+size = Vector2(59, 576)
 
 [node name="Pillars" type="Node2D"]
+
+[node name="UpparPillarBody" type="CharacterBody2D" parent="."]
+
+[node name="UpperPillarTexture" type="ColorRect" parent="UpparPillarBody"]
+offset_top = -536.0
+offset_right = 59.0
+offset_bottom = 40.0
+color = Color(0.721569, 0.439216, 0.0509804, 1)
+
+[node name="UpparPillarCollision" type="CollisionShape2D" parent="UpparPillarBody"]
+position = Vector2(29.5, -248)
+shape = SubResource("RectangleShape2D_f06du")
+
+[node name="LowerPillarBody" type="CharacterBody2D" parent="."]
+
+[node name="LowerPillarTexture" type="ColorRect" parent="LowerPillarBody"]
+offset_top = 160.0
+offset_right = 59.0
+offset_bottom = 736.0
+color = Color(0.721569, 0.439216, 0.0509804, 1)
+
+[node name="LowerPillarCollision" type="CollisionShape2D" parent="LowerPillarBody"]
+position = Vector2(29.5, 448)
+shape = SubResource("RectangleShape2D_66qnj")
