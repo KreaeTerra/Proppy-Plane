@@ -5,6 +5,8 @@ var Pillar : PackedScene = preload("res://scenes/pillars.tscn")
 @onready var timer : Node = $PillarTimer
 @onready var player : Node = $Plane/Area2D
 
+@export var scene_game_over : PackedScene
+
 func _ready():
 	randomize()
 	player.body_entered.connect(player_hits_obstacle)
@@ -22,4 +24,4 @@ func _on_pillar_timer_timeout():
 	timer.start()
 
 func player_hits_obstacle(body):
-	print("Hit Detected")
+	get_tree().change_scene_to_packed(scene_game_over)
