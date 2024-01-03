@@ -7,7 +7,7 @@ Proppy Plane is my first ever public game on Github. I created it mainly for two
 
  ## Current Features
 
-* No textures yet apart from godots own icon.svg file. We going all function and no form as of yet.
+* No textures yet apart from Godot's own icon.svg file. We going all function and no form as of yet.
 
 * A game over screen that barely works and manages to not crash the game, nifty I would say.
 
