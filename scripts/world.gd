@@ -3,7 +3,7 @@ extends Node2D
 var Pillar : PackedScene = preload("res://scenes/pillars.tscn")
 
 @onready var timer : Node = $PillarTimer
-@onready var player : Node = $Plane/Area2D
+@onready var player : Node = $Plane
 
 var score : int = 0
 
@@ -11,8 +11,8 @@ var score : int = 0
 
 func _ready():
 	randomize()
-	player.body_entered.connect(player_hits_obstacle)
-	player.area_entered.connect(player_passed_gap)
+	player.get_node("Area2D").body_entered.connect(player_hits_obstacle)
+	player.get_node("Area2D").area_entered.connect(player_passed_gap)
 	spawn_pillar()
 
 func _process(delta):
