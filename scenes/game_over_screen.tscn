@@ -2,26 +2,20 @@
 
 [ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_a1t8i"]
 
-[node name="GameOverScreen" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GameOverScreen" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_a1t8i")
 
 [node name="Background" type="ColorRect" parent="."]
-layout_mode = 1
+process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.243137, 0, 0, 0.6)
+color = Color(0.243137, 0, 0, 0.701961)
 
 [node name="MainText" type="Label" parent="."]
-layout_mode = 0
 offset_top = 30.0
 offset_right = 720.0
 offset_bottom = 158.0
@@ -32,10 +26,25 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ScoreLabel" type="Label" parent="."]
-layout_mode = 0
 offset_top = 180.0
 offset_right = 720.0
 offset_bottom = 360.0
 text = "YOU MANAGED TO GO THROUGH X PILLARS BEFORE DYING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 180)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -23.0
+offset_right = 125.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "PRESS 'R' TO RESTART THE GAME"
 horizontal_alignment = 1
 vertical_alignment = 1
