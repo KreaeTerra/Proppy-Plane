@@ -12,6 +12,7 @@ var score : int = 0
 func _ready():
 	randomize()
 	player.body_entered.connect(player_hits_obstacle)
+	player.area_entered.connect(player_passed_gap)
 	spawn_pillar()
 
 func _process(delta):
@@ -29,3 +30,6 @@ func _on_pillar_timer_timeout():
 
 func player_hits_obstacle(body):
 	get_tree().change_scene_to_packed(scene_game_over)
+
+func player_passed_gap(area):
+	score += 1
