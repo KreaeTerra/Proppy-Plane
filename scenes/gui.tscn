@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bgtngl4ju0ku8"]
+
+[node name="Gui" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -61.0
+offset_top = 18.0
+offset_right = -20.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_group_ = true

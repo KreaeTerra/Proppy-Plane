@@ -17,6 +17,7 @@ func _ready():
 
 func _process(delta):
 	Gamedata.score = score
+	$Gui/Label.text = "Score: " + str(score)
 
 func spawn_pillar():
 	timer.wait_time = 2.0
