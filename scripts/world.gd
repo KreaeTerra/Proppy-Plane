@@ -17,6 +17,7 @@ func _ready():
 
 func _process(delta):
 	Gamedata.score = score
+	#TODO I need to make the gui set its own score and other variables instead of the world doing it
 	$Gui/Label.text = "Score: " + str(score)
 
 func spawn_pillar():
