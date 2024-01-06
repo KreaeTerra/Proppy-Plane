@@ -20,3 +20,4 @@ func _process(delta):
 
 func tilt():
 	$Sprite.rotation = velocity.y * 0.0011
+	$Area2D.rotation = velocity.y * 0.0011
