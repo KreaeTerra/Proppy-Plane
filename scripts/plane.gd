@@ -14,4 +14,9 @@ func _process(delta):
 	velocity.x = direction * speed
 	if velocity.y < terminal_velocity:
 		velocity.y += gravity
+	tilt()
 	move_and_slide()
+
+
+func tilt():
+	$Sprite.rotation = velocity.y * 0.0011
