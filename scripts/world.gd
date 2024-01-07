@@ -31,7 +31,9 @@ func _on_pillar_timer_timeout():
 	timer.start()
 
 func player_hits_obstacle(body):
-	get_tree().change_scene_to_packed(scene_game_over)
+	var game_over : Node = scene_game_over.instantiate()
+	add_child(game_over)
+	get_tree().paused = true
 
 func player_passed_gap(area):
 	score += 1
