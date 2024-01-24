@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dyw34rn6apu6v"]
+[gd_scene load_steps=7 format=3 uid="uid://dyw34rn6apu6v"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_xcusl"]
 [ext_resource type="PackedScene" uid="uid://b1xj0tsrr44q" path="res://scenes/plane.tscn" id="2_h6ayy"]
@@ -7,6 +7,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_03ejd"]
 size = Vector2(32, 580)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnbmp"]
+size = Vector2(820, 32)
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_xcusl")
@@ -30,6 +33,18 @@ collision_layer = 0
 
 [node name="FrameLeft" type="CollisionShape2D" parent="DeathBorder"]
 position = Vector2(-50, 240)
+shape = SubResource("RectangleShape2D_03ejd")
+
+[node name="FrameUp" type="CollisionShape2D" parent="DeathBorder"]
+position = Vector2(350, -50)
+shape = SubResource("RectangleShape2D_xnbmp")
+
+[node name="FrameDown" type="CollisionShape2D" parent="DeathBorder"]
+position = Vector2(350, 530)
+shape = SubResource("RectangleShape2D_xnbmp")
+
+[node name="FrameRight" type="CollisionShape2D" parent="DeathBorder"]
+position = Vector2(750, 240)
 shape = SubResource("RectangleShape2D_03ejd")
 
 [connection signal="timeout" from="PillarTimer" to="." method="_on_pillar_timer_timeout"]
