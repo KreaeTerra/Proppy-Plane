@@ -13,6 +13,8 @@ func _ready():
 	randomize()
 	player.get_node("Area2D").body_entered.connect(player_hits_obstacle)
 	player.get_node("Area2D").area_entered.connect(player_passed_gap)
+	
+	$DeathBorder.area_entered.connect(player_hits_obstacle)
 	spawn_pillar()
 
 func _process(delta):
