@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var maximum_lift_speed : int = -100
 
 var can_control = false
+var remaining_fuel : float = 100.00
 
 func _process(delta):
 	if can_control == true:
@@ -19,7 +20,9 @@ func _process(delta):
 			velocity.y += gravity
 		tilt()
 		move_and_slide()
-
+		
+		remaining_fuel -= 10 * delta
+		Gamedata.fuel = remaining_fuel
 
 func tilt():
 	$Sprite.rotation = velocity.y * 0.0011
