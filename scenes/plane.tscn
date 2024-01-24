@@ -7,6 +7,7 @@
 size = Vector2(56, 20)
 
 [node name="Plane" type="CharacterBody2D"]
+collision_mask = 3
 script = ExtResource("1_jfe4y")
 lift_force = -20
 maximum_lift_speed = -155
@@ -16,6 +17,14 @@ scale = Vector2(0.5, 0.16)
 texture = ExtResource("1_gsp2c")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 3
 
 [node name="Collision" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_wdsu1")
+
+[node name="IntroTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="IntroTimer" to="." method="_on_intro_timer_timeout"]
