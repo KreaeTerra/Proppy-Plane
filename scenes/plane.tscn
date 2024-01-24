@@ -16,6 +16,7 @@ scale = Vector2(0.5, 0.16)
 texture = ExtResource("1_gsp2c")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 3
 
 [node name="Collision" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_wdsu1")
