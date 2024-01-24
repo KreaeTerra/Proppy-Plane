@@ -1,9 +1,12 @@
-[gd_scene format=3 uid="uid://bgtngl4ju0ku8"]
+[gd_scene load_steps=2 format=3 uid="uid://bgtngl4ju0ku8"]
+
+[ext_resource type="Script" path="res://scripts/gui.gd" id="1_18rgl"]
 
 [node name="Gui" type="CanvasLayer"]
+script = ExtResource("1_18rgl")
 
 [node name="Label" type="Label" parent="."]
-anchors_preset = -1
+anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -61.0
@@ -16,3 +19,18 @@ text = "Score: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_group_ = true
+
+[node name="FuelLabel" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 17.0
+offset_right = 48.0
+offset_bottom = 40.0
+text = "Fuel"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 58.0
+offset_top = 13.0
+offset_right = 342.0
+offset_bottom = 47.0
+step = 1.0
+value = 100.0
