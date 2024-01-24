@@ -49,6 +49,7 @@ one_shot = true
 autostart = true
 
 [node name="GapArea" type="Area2D" parent="."]
+collision_layer = 0
 
 [node name="GapAreaDetection" type="CollisionShape2D" parent="GapArea"]
 position = Vector2(34, 158)

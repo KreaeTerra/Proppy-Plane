@@ -26,8 +26,7 @@ wait_time = 4.0
 position = Vector2(50, 100)
 
 [node name="DeathBorder" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 0
+collision_layer = 0
 
 [node name="FrameLeft" type="CollisionShape2D" parent="DeathBorder"]
 position = Vector2(-50, 240)
