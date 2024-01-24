@@ -13,6 +13,8 @@ func _ready():
 	randomize()
 	player.get_node("Area2D").body_entered.connect(player_hits_obstacle)
 	player.get_node("Area2D").area_entered.connect(player_passed_gap)
+	
+	$DeathBorder.area_entered.connect(player_hits_obstacle)
 	spawn_pillar()
 
 func _process(delta):
@@ -26,6 +28,7 @@ func spawn_pillar():
 
 func _on_pillar_timer_timeout():
 	var pillar_instance = Pillar.instantiate()
+	pillar_instance.position.x = 800
 	add_child(pillar_instance)
 	timer.wait_time = randf_range(1.5, 4.0)
 	timer.start()

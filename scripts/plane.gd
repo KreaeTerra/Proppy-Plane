@@ -7,17 +7,24 @@ extends CharacterBody2D
 @export var lift_force : int = -30
 @export var maximum_lift_speed : int = -100
 
+var can_control = false
+
 func _process(delta):
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if Input.is_action_pressed("ui_up") and velocity.y > maximum_lift_speed:
-		velocity.y += lift_force
-	velocity.x = direction * speed
-	if velocity.y < terminal_velocity:
-		velocity.y += gravity
-	tilt()
-	move_and_slide()
+	if can_control == true:
+		var direction = Input.get_axis("ui_left", "ui_right")
+		if Input.is_action_pressed("ui_up") and velocity.y > maximum_lift_speed:
+			velocity.y += lift_force
+		velocity.x = direction * speed
+		if velocity.y < terminal_velocity:
+			velocity.y += gravity
+		tilt()
+		move_and_slide()
 
 
 func tilt():
 	$Sprite.rotation = velocity.y * 0.0011
 	$Area2D.rotation = velocity.y * 0.0011
+
+
+func _on_intro_timer_timeout():
+	can_control = true
